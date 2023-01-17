@@ -9,3 +9,5 @@ Shell scripting topics
 6. exit status
 7. inputs
 8. quotes
+9. Re-directors
+10. SED editors
