@@ -1,11 +1,11 @@
 echo "Hello world"
 echo "***** Hello world ****"
 
-#color code syntax : echo -e "\e[COLnMESSAGE\[0m"
-#Red  - 31 -echo -e "\e[31mMessage\e[0m"
-#Yellow - 32 -echo -e "\e[32mMessage\e[0m"
-#Blue - 33 -echo -e "\e[33mMessage\e[0m"
-#Green - 34 -echo -e "\e[34mMessage\e[0m"
+# color code syntax : echo -e "\e[COLnMESSAGE\[0m"
+# Red  - 31 -echo -e "\e[31mMessage\e[0m"
+# Yellow - 32 -echo -e "\e[32mMessage\e[0m"
+# Blue - 33 -echo -e "\e[33mMessage\e[0m"
+# Green - 34 -echo -e "\e[34mMessage\e[0m"
 
 echo -e "\e[31mMessage\e[0m"
 echo -e "\e[32mMessage\e[0m"
