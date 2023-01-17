@@ -6,3 +6,12 @@ class=Devops
 echo trainer name = $trainer
 echo class name = $class
 echo class name = ${class}
+
+# command to check the date in linux
+Date=$(date +%F)
+echo hey, Today date is $DATE
+
+
+ADD=$((2+3))
+echo ADD - $ADD
+
