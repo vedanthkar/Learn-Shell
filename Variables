@@ -15,3 +15,23 @@ echo hey, Today date is $DATE
 ADD=$((2+3))
 echo ADD - $ADD
 
+#Properties of the variable. Default type is Read Write
+
+a = 10
+echo $a
+10
+
+a=20
+echo $a
+20
+
+#Read only
+a=100
+readonly a
+a=200
+
+
+
+
+
+
