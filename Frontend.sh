@@ -1,4 +1,6 @@
-script_location=${pwd}
+pwd
+
+exit
 yum install nginx -y
 systemctl enable nginx
 systemctl stanrt nginx
