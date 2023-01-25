@@ -1,54 +1,38 @@
 script_location=$(pwd)
 Log=/tmp/roboshop.log
 
+status_check() {
+if [ $? -eq 0 ]; then
+  echo success
+  else
+    echo failure
+fi
+}
+
 
 yum install nginx -y &>>${Log}
-if [ $? -eq 0 ]; then
-  echo success
-  else
-    echo failure
-fi
+status_check
+
 
 systemctl enable nginx &>>${Log}
-if [ $? -eq 0 ]; then
-  echo success
-  else
-    echo failure
-fi
+status_check
+
 systemctl start nginx &>>${Log}
-if [ $? -eq 0 ]; then
-  echo success
-  else
-    echo failure
-fi
+status_check
+
 rm -rf /usr/share/nginx/html/* &>>${Log}
 
-if [ $? -eq 0 ]; then
-  echo success
-  else
-    echo failure
-fi
+status_check
+
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip &>>${Log}
-if [ $? -eq 0 ]; then
-  echo success
-  else
-    echo failure
-fi
+status_check
 
 cd /usr/share/nginx/html &>>${Log}
 unzip /tmp/frontend.zip &>>${Log}
 
-if [ $? -eq 0 ]; then
-  echo success
-  else
-    echo failure
-fi
+status_check
 
 cp ${script_location}/Files/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf &>>${Log}
 systemctl restart nginx &>>${Log}
 
-if [ $? -eq 0 ]; then
-  echo success
-   else
-    echo failure
-fi
+status_check
