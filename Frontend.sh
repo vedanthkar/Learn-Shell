@@ -48,6 +48,6 @@ systemctl restart nginx
 
 if [$? -eq 0]; then
   echo success
-  else
+   else
     echo failure
 fi
