@@ -6,3 +6,11 @@ then
 else
   echo a is not 10
   fi
+
+
+  example () {
+echo i am a example function
+  }
+
+  # call a function
+  example
