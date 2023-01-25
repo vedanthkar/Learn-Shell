@@ -4,5 +4,5 @@ then
   echo a is 10
 
 else
-  eacho a is not 10
+  echo a is not 10
   fi
